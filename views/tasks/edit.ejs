@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><%= tasks.taskName %></title>
+</head>
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <main>
+        <h1>Edit Task</h1>
+        <form action="/tasks/<%= tasks._id %>?_method=put">
+            <fieldset aria-labelledby="new-blog-legend">
+                <legend id="new-task-legend">New Task</legend>
+                    <div>
+                        <label for="taskName">Task Name:</label>
+                        <input type="text" name="taskName" id="taskName" value="<%= tasks.taskName %>">
+                    </div>
+                    <div>
+                        <label for="todayDay">Today's Date</label>
+                        <input type="date" name="todayDay" id="todayDay" value="<%= tasks.todayDay %>">
+                    </div>
+                    <div>
+                        <label for="dueDate">Due Date: </label>
+                        <input type="date" name="dueDate" id="dueDate" value="<%= tasks.dueDate %>">
+                    </div>
+                    <div>
+                        <label for="dueTime">Time due: </label>
+                        <input type="time" name="dueTime" id="dueTime" value="<%= tasks.dueTime %>">
+                    </div>
+                    <div>
+                        <label for="taskType">Task Type</label>
+                        <select name="taskType">
+                            <option value="none" <% if (tasks.taskType === 'none') { %>
+                             selected='selected'
+                            <% } %>>- empty -</option>
+                            <option value="Work" <% if (tasks.taskType === 'Work') { %>
+                                selected='selected'
+                               <% } %>>Work</option>
+                            <option value="Appointments" <% if (tasks.taskType === 'Appointments') { %>
+                                selected='selected'
+                               <% } %>>Appointment</option>
+                            <option value="Errand" <% if (tasks.taskType === 'Errand') { %>
+                                selected='selected'
+                               <% } %>>Errand</option>
+                            <option value="Hobbies" <% if (tasks.taskType === 'Hobbies') { %>
+                                selected='selected'
+                               <% } %>>Hobby</option>
+                            <option value="Other" <% if (tasks.taskType === 'Other') { %>
+                                selected='selected'
+                               <% } %>></option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="description">Additional Notes</label>
+                        <textarea name="description"><%= tasks.description %></textarea>
+                    </div>
+                    <div>
+                        <label for="priority">Priority Level</label>
+                        <select name="priority">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit">Update Task</button>
+                    </div>                    
+            </fieldset>
+
+
+
+
+        </form>
+
+
+    </main>
+</body>
+</html>

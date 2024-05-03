@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title><%= tasks.taskName %></title>
+</head>
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <h1><%= tasks.taskName %></h1>
+    <h3>Due: <%= tasks.dueDate %></h3>
+    <h3>Time Due: <%= tasks.dueTime %></h3>
+    <h3>Task Type: <%= tasks.taskType %></h3>
+    <h4>Description: <%= tasks.description %></h4>
+    <h3>Priority Level: <%= tasks.priority %></h3>
+    <div class="options" method=post>
+        <form action="/tasks/<%= tasks._id %>/edit">
+        <button type="submit">Edit Task</button>
+    </form>
+    <form action="/tasks/<%= tasks._id %>?_method=delete" method=post>
+        <button type="submit">Delete Task</button>
+    </form>
+    </div>
+    
+</body>
+</html>

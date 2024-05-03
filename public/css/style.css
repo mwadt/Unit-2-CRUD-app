@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-evenly;
+    padding: 20px 0;
+    background-color: orange;
+    width: 100%;
+}
+nav > a {
+    text-decoration: none;
+    font-size: 1.3rem;
+    font-family: 900;
+    color: black;
+}
+
+main {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+form {
+    
+}
+
+fieldset {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 20px 20px;
+    gap: 10px;
+    align-items: baseline;
+
+}

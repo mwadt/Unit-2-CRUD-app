@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../../css/style.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <h1>Create a New Task!</h1>
+        <form action="/tasks" method=post>
+            <fieldset aria-labelledby="new-blog-legend">
+                <legend id="new-task-legend">New Task</legend>
+                    <div>
+                        <label for="taskName">Task Name:</label>
+                        <input type="text" name="taskName" id="taskName">
+                    </div>
+                    <div>
+                        <label for="todayDay">Today's Date</label>
+                        <input type="date" name="todayDay" id="todayDay">
+                    </div>
+                    <div>
+                        <label for="dueDate">Due Date: </label>
+                        <input type="date" name="dueDate" id="dueDate">
+                    </div>
+                    <div>
+                        <label for="dueTime">Time due: </label>
+                        <input type="time" name="dueTime" id="dueTime">
+                    </div>
+                    <div>
+                        <label for="taskType">Task Type</label>
+                        <select name="taskType">
+                            <option value="none">- empty -</option>
+                            <option value="Work">Work</option>
+                            <option value="Appointments">Appointment</option>
+                            <option value="Errand">Errand</option>
+                            <option value="Hobbies">Hobby</option>
+                            <option value="Other"></option>
+                        </select>
+                    </div>
+                    <div>
+                        <label for="description">Additional Notes</label>
+                        <textarea name="description"></textarea>
+                    </div>
+                    <div>
+                        <label for="priority">Priority Level</label>
+                        <select name="priority">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button type="submit">Create Task</button>
+                    </div>                    
+            </fieldset>
+
+
+
+
+        </form>
+
+
+    </main>
+    
+</body>
+</html>
