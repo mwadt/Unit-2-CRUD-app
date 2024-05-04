@@ -1,4 +1,4 @@
-* {
+/* * {
     box-sizing: border-box;
     margin: 0;
 }
@@ -7,27 +7,43 @@ body {
     display: flex;
     flex-direction: column;
     align-content: center;
-    justify-content: space-evenly;
+    justify-content: center;
     padding: 20px 0;
-    background-color: orange;
+    background-color: aquamarine;
     width: 100%;
+    border-color: darkcyan;
+    
 }
 nav > a {
+    display: flex;
+    justify-content: center;
     text-decoration: none;
     font-size: 1.3rem;
     font-family: 900;
-    color: black;
+    color: navy;
+}
+
+input[type=string] {
+    border: 3px solid red;
 }
 
 main {
     margin-top: 20px;
     display: flex;
-    flex-direction: column;
+    
     gap: 20px;
+    align-content: center;
+    justify-content: center;
 
 }
-form {
+button {
+    background-color: cadetblue;
     
+}
+
+button:hover {
+    border: 3px solid wheat;
+    cursor: pointer;
 }
 
 fieldset {
@@ -36,5 +52,167 @@ fieldset {
     padding: 15px 20px 20px;
     gap: 10px;
     align-items: baseline;
+    border-color: darkcyan;
+}
 
+/*  */
+main > h1 {
+    display: flex;
+    justify-content: center;
+    color: greenyellow;
+}
+body {
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: greenyellow;
+}
+input{
+    background-color: rgb(43, 42, 42);
+    color: greenyellow;
+    border: .5px solid greenyellow;
+    margin: 20px;
+    border-radius: 10px;
+    
+}
+fieldset {
+    display: flex;
+}
+select {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    background-color: rgb(43, 42, 42);
+    color: greenyellow;
+    /* border: 1px solid greenyellow; */
+    border-radius: 10px;
+    font-size: 18px;
+   
+    
+}
+.task-type-drop {
+    appearance: none;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    text-align: center;
+    width: 150px;
+    height: 30px;
+    font-size: 18px;
+    
+}
+.task-type {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+
+fieldset {
+    background-color: grey;
+    color: greenyellow;
+    font-weight: 700;
+    font-size: large;
+    display: flex;
+    justify-content: space-evenly;
+    border-radius: 10px;
+    border: 2px solid greenyellow;
+    
+    
+}
+textarea {
+    display: flex;
+    
+    align-items: center;
+    background-color: rgb(43, 42, 42);
+    /* border: 1px solid greenyellow; */
+    color: greenyellow;
+    font-size: 16px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    height: 100px;
+}
+.additional-notes {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+.todayDay {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: 0;
+}
+input[type=date] {
+    display: flex;
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    text-align: center;
+}
+input[type=date]::-webkit-calendar-picker-indicator {
+    background-color: greenyellow;
+    
+}
+.due-date {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.due-time {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+input[type=time] {
+    display: flex;
+    justify-content: space-evenly;
+    width: 150px;
+    height: 50px;
+    font-size: 18px;
+    font-size: large;
+}
+input[type=time]::-webkit-calendar-picker-indicator {
+    background-color: greenyellow;
+    
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    
+    
+    color: greenyellow;
+}
+nav > a {
+    color: greenyellow;
+}
+.task-name{ 
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-weight: 700;
+    
+}
+input[type=text] {
+    
+    /* border: 1px solid greenyellow; */
+    height: 50px;
+    font-size: 18px;
+}
+button {
+    background-color: rgb(43, 43, 42);
+    color: greenyellow;
+    border-radius: 10px;
+    margin-top: 100%;
+    
+}
+button:hover {
+    border: 1.5px solid greenyellow;
+    cursor: pointer;
 }
