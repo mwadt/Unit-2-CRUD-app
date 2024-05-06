@@ -8,14 +8,18 @@
 </head>
 <body>
     <%- include('../partials/nav.ejs') %>
+    <main>
     <h1>All Tasks:</h1>
+    
     <% tasks.forEach(task => { %>
      <h1><%= task.taskName %></h1>
      <h3>Due: <%= task.dueDate %></h3>
      <h3>Time Due: <%= task.dueTime %></h3>
      <p>
      <a href="/tasks/<%= task._id %>"><%= task.taskName %></a>
+     <a href="/tasks/type/<%= task.taskType %>"><%= task.taskType %></a>
      </p>
+     </main>
     <% }) %>
 </body>
 </html>

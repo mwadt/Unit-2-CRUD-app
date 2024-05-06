@@ -55,7 +55,11 @@ fieldset {
     border-color: darkcyan;
 }
 
-/*  */
+/*  Second edit*/
+
+main {
+    color: greenyellow;
+}
 main > h1 {
     display: flex;
     justify-content: center;
@@ -72,13 +76,13 @@ input{
     background-color: rgb(43, 42, 42);
     color: greenyellow;
     border: .5px solid greenyellow;
-    margin: 20px;
+   
     border-radius: 10px;
     
 }
-fieldset {
+/* fieldset {
     display: flex;
-}
+} */
 select {
     display: flex;
     flex-direction: column;
@@ -117,9 +121,10 @@ fieldset {
     font-size: large;
     display: flex;
     justify-content: space-evenly;
+    /* align-items: center; */
     border-radius: 10px;
     border: 2px solid greenyellow;
-    
+    width: 75%;
     
 }
 textarea {
@@ -215,4 +220,20 @@ button {
 button:hover {
     border: 1.5px solid greenyellow;
     cursor: pointer;
+}
+body > a {
+    color: greenyellow;
+}
+body {
+    color: greenyellow;
+}
+
+section {
+    display: inline flex;
+    flex-direction: column;
+}
+.section-two {
+    display: inline flex;
+    align-content: center;
+    justify-content: start;
 }

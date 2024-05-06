@@ -13,21 +13,10 @@
         <form action="/tasks" method=post>
             <fieldset aria-labelledby="new-blog-legend">
                 <legend id="new-task-legend">New Task</legend>
+                    <section class="section-two">
                     <div class="task-name">
                         <label for="taskName">Task Name:</label>
                         <input type="text" name="taskName" id="taskName">
-                    </div>
-                    <div class="todayDay">
-                        <label for="todayDay">Today's Date</label>
-                        <input type="date" name="todayDay" id="todayDay">
-                    </div>
-                    <div class="due-date">
-                        <label for="dueDate">Due Date: </label>
-                        <input type="date" name="dueDate" id="dueDate">
-                    </div>
-                    <div class="due-time">
-                        <label for="dueTime">Time due: </label>
-                        <input type="time" name="dueTime" id="dueTime">
                     </div>
                     <div class="task-type-drop">
                         <label for="taskType">Task Type</label>
@@ -40,6 +29,22 @@
                             <option value="Other"></option>
                         </select>
                     </div>
+                    </section>
+                    <section class="section-one">
+                    <div class="todayDay">
+                        <label for="todayDay">Today's Date</label>
+                        <input type="date" name="todayDay" id="todayDay">
+                    </div>
+                    <div class="due-date">
+                        <label for="dueDate">Due Date: </label>
+                        <input type="date" name="dueDate" id="dueDate">
+                    </div>
+                    <div class="due-time">
+                        <label for="dueTime">Time due: </label>
+                        <input type="time" name="dueTime" id="dueTime">
+                    </div>
+                    </section>
+                    
                     <div class="additional-notes">
                         <label for="description">Additional Notes</label>
                         <textarea name="description"></textarea>

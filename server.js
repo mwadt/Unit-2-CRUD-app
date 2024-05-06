@@ -35,12 +35,27 @@ app.get('/tasks', async (req, res) => {
     })
 })
 
+
+
 app.get('/tasks/:id', async (req, res) => {
     const findTasksId = await Task.findById(req.params.id)
     res.render('tasks/show.ejs', {
         tasks: findTasksId
     })
 })
+
+// app.get('/tasks/:taskType', async (req, res) => {
+//     const taskType = req.params.taskType
+//     filteredTask = await Task.find({ taskType: taskType })
+//     res.render('tasks/categories.ejs', {
+//         taskType: filteredTask 
+//     } )
+// })
+
+app.get('/types', async (req, res) => {
+    res.render('types.ejs')
+})
+
 
 app.get('/tasks/:id/edit', async (req, res) => {
     const findTaskById = await Task.findByIdAndUpdate(req.params.id)
@@ -55,6 +70,8 @@ app.put('/tasks/:id', async (req, res) => {
     res.redirect('/tasks')
 })
 
+
+
 app.post('/tasks', async (req, res) => {
     await Task.create(req.body)
     res.redirect('/tasks')
@@ -63,6 +80,15 @@ app.post('/tasks', async (req, res) => {
 app.delete('/tasks/:id', async (req, res) => {
     await Task.findByIdAndDelete(req.params.id)
     res.redirect('/tasks')
+})
+
+app.get('/tasks/type/:taskType', async (req, res) => {
+    const taskType = req.params.taskType
+    tasks = await Task.find({ taskType: taskType })
+    res.render('tasks/categories.ejs', {
+        tasks: tasks,
+        taskType: taskType 
+    } )
 })
 
 app.listen(3000, () => {
