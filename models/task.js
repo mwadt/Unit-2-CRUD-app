@@ -5,7 +5,10 @@ const taskSchema = new mongoose.Schema({
     todayDate: String,
     dueDate: String,
     dueTime: String,
-    taskType: String,
+    taskType: {
+        type: String,
+        default: 'none'
+    },
     description: String,
     priority: Number,
     

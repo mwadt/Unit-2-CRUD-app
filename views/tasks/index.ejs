@@ -9,17 +9,43 @@
 <body>
     <%- include('../partials/nav.ejs') %>
     <main>
-    <h1>All Tasks:</h1>
-    
+    <div class="home">
+    <h1>All Tasks: 
+        <select id="filter-priority" name="priority">
+        <option value="default">Filter by priority level</option>
+        <option value="asc">Priority: Ascending</option>
+        <option value="desc">Priority: Descending</option>
+        
+     </select></h1>
     <% tasks.forEach(task => { %>
-     <h1><%= task.taskName %></h1>
-     <h3>Due: <%= task.dueDate %></h3>
-     <h3>Time Due: <%= task.dueTime %></h3>
-     <p>
-     <a href="/tasks/<%= task._id %>"><%= task.taskName %></a>
-     <a href="/tasks/type/<%= task.taskType %>"><%= task.taskType %></a>
-     </p>
-     </main>
+    <fieldset>
+     
+     <section class="col1">
+        <h1><a href="/tasks/<%= task._id %>"><%= task.taskName %></a></h1>
+        <h4>Due: <%= task.dueDate %></h4>
+        
+        <h4>Time Due: <%= task.dueTime %></h4>
+        
+     </section>
+    <div class="col2"> Notes:
+    <%= task.description %>
+    </div>
+     <div class="col3">
+        <p>Priority level: <%= task.priority %></p>
+        <p>Task Type: <%= task.taskType %></p>
+     </div>
+     </fieldset>
+     
     <% }) %>
+    </div>
+    </main>
+    <script>let filter = document.querySelector('#filter-priority')
+    console.log(filter)
+    filter.addEventListener('change', (e) => {
+        console.log(e.target.value)
+        if(e.target.value != 'default'){
+        window.location.href = "http://localhost:3000/tasks?filter=" + e.target.value;
+        }
+    })</script>
 </body>
 </html>

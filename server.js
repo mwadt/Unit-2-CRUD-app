@@ -29,7 +29,19 @@ app.get('/tasks/new', (req, res) => {
 })
 
 app.get('/tasks', async (req, res) => {
-    const allTasks = await Task.find()
+    const priorityLevel = req.query.filter
+    console.log(priorityLevel)
+    let allTasks 
+    if (req.query.filter === 'asc') {
+         allTasks = await Task.find().sort({priority: -1})
+    } else if (req.query.filter === 'desc') {
+        allTasks = await Task.find().sort({priority: 1})
+    } else {
+         allTasks = await Task.find()
+    }
+    
+    
+
     res.render('tasks/index.ejs', {
         tasks: allTasks
     })

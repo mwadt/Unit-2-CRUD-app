@@ -8,13 +8,16 @@
 </head>
 <body>
     <%- include('../partials/nav.ejs') %>
-    
-    <% tasks.forEach(task => { %>
-    <fieldset>
-     <h3>Task Name: <%= task.taskName %></h3>
-     
-    </fieldset>
-    <% }) %>
-    
+    <main class="category">
+        <div>
+            <% tasks.forEach(task => { %>
+                <fieldset>
+                 <h3>Task Name: <%= task.taskName %></h3>
+                 
+                </fieldset>
+                <% }) %>
+        </div>
+    </main>
+        
 </body>
 </html>

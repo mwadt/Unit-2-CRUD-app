@@ -9,6 +9,7 @@
 <body>
     <%- include('../partials/nav.ejs') %>
     <main>
+        <div>
         <h1 id="main-heading">Create a Task</h1>
         <form action="/tasks" method=post>
             <fieldset aria-labelledby="new-blog-legend">
@@ -48,8 +49,7 @@
                     <div class="additional-notes">
                         <label for="description">Additional Notes</label>
                         <textarea name="description"></textarea>
-                    </div>
-                    <div class="container">
+                        <div class="priority-level">
                         <label for="priority">Priority Level</label>
                         <select name="priority">
                             <option value="1">1</option>
@@ -58,9 +58,12 @@
                             <option value="4">4</option>
                             <option value="5">5</option>
                         </select>
-                   
+                        </div>
+                        <div class="right">
                         <button class="submit" type="submit">Create Task</button>
-                    </div>                    
+                        </div>
+                    </div>
+                                    
             </fieldset>
 
 
@@ -68,7 +71,7 @@
 
         </form>
 
-
+        </div>
     </main>
     
 </body>

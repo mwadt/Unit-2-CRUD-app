@@ -227,31 +227,62 @@ body > a {
 body {
     color: greenyellow;
 } */
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+:root{
+    --black:#2A2D34;
+    --burnt_orange:#F26430;
+}
 body {
-    background-color: black;
+    background-color: var(--black);
     color: greenyellow;
     display: flex;
-    justify-content: center;
-    
+      
     
 }
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-color: rgb(43, 42, 42);
+    a{
+        color: greenyellow;
+        display: inline-block;
+        background-color: gray;
+        padding: 5px;
+    }
+}
 
+main {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    
+}
+main > div {
+    max-width: 700px;
+}
 fieldset {
     background-color: gray;
     font-size: 18px;
     font-family: Arial, Helvetica, sans-serif;
     border: 3px solid greenyellow;
     border-radius: 10px;
-    width: 75%;
+    width: 100%;
+    gap: 20px;
     display: flex;
     flex-direction: row;
     font-weight: bold;
 }
 
 section {
-    display: inline flex;
+    display: flex;
     flex-direction: column;
     text-align: center;
+    gap: 20px;
     
 }
 .section-two {
@@ -266,7 +297,7 @@ section {
     display: inline-flex;
     flex-direction: column;
     align-content: center;
-    width: 150px;
+    
     text-align: center;
     height: 30px;
     border-radius: 10px;
@@ -308,7 +339,7 @@ textarea {
     flex-direction: column;
     text-align: center;
     border-radius: 10px;
-    
+    gap: 20px;
 }
 textarea {
     border-radius: 10px;
@@ -319,6 +350,10 @@ select {
     color: greenyellow;
     font-size: 16px
     
+}
+.priority-level {
+    display: flex;
+    justify-content: space-between;
 }
 .container {
     position: relative;
@@ -332,9 +367,6 @@ select {
     text-align: center;
 }
 .submit {
-    position: absolute;
-    bottom: 0;
-    right: 0;
     width: 80px;
     background-color: rgb(43, 42, 42);
     color: yellowgreen;
@@ -345,4 +377,43 @@ button:hover {
     background-color: rgb(68, 66, 66);
     border: 1px solid greenyellow;
     border-radius: 10px;
+}
+input[type=time] {
+    text-align: center;
+}
+input[type=time]::-webkit-calendar-picker-indicator {
+    background-color: greenyellow;
+}
+input[type=date]::-webkit-calendar-picker-indicator {
+    background-color: yellowgreen;
+}
+.right {
+    display: flex;
+    justify-content: flex-end;
+}
+.home {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+        h1{
+            text-align: left;
+        }
+        fieldset {
+            display: flex;
+            flex-direction: row;
+        }
+        .col1{
+            flex:1 1 35%
+        }
+        .col2{
+            flex:1 1 50%
+        }
+        .col3{
+            flex:1 1 15%
+        }
+}
+.category > div {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
 }
