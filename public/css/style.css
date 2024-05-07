@@ -303,3 +303,46 @@ textarea {
     width: 250px;
     height: 100px;
 }
+.additional-notes {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-radius: 10px;
+    
+}
+textarea {
+    border-radius: 10px;
+}
+select {
+    text-align: center;
+    background-color: rgb(43, 42, 42);
+    color: greenyellow;
+    font-size: 16px
+    
+}
+.container {
+    position: relative;
+    margin-left: 20px;
+}
+.priority {
+    position: relative;
+    margin-left: 20px;
+    top: 0;
+    right: 0;
+    text-align: center;
+}
+.submit {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 80px;
+    background-color: rgb(43, 42, 42);
+    color: yellowgreen;
+    margin-left: 20px;
+    border-radius: 10px;
+}
+button:hover {
+    background-color: rgb(68, 66, 66);
+    border: 1px solid greenyellow;
+    border-radius: 10px;
+}
