@@ -57,7 +57,7 @@ fieldset {
 
 /*  Second edit*/
 
-main {
+/* main {
     color: greenyellow;
 }
 main > h1 {
@@ -79,24 +79,24 @@ input{
    
     border-radius: 10px;
     
-}
+} */
 /* fieldset {
     display: flex;
 } */
-select {
+/* select {
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     background-color: rgb(43, 42, 42);
     color: greenyellow;
-    /* border: 1px solid greenyellow; */
+   
     border-radius: 10px;
     font-size: 18px;
    
     
-}
-.task-type-drop {
+} */
+/* .task-type-drop {
     appearance: none;
     display: flex;
     flex-direction: column;
@@ -111,28 +111,28 @@ select {
     display: flex;
     justify-content: center;
     align-content: center;
-}
+} */
 
 
-fieldset {
+/* fieldset {
     background-color: grey;
     color: greenyellow;
     font-weight: 700;
     font-size: large;
     display: flex;
     justify-content: space-evenly;
-    /* align-items: center; */
+    
     border-radius: 10px;
     border: 2px solid greenyellow;
     width: 75%;
     
-}
-textarea {
+} */
+/* textarea {
     display: flex;
     
     align-items: center;
     background-color: rgb(43, 42, 42);
-    /* border: 1px solid greenyellow; */
+    
     color: greenyellow;
     font-size: 16px;
     border-radius: 10px;
@@ -203,10 +203,10 @@ nav > a {
     text-align: center;
     font-weight: 700;
     
-}
-input[type=text] {
+} */
+/* input[type=text] {
     
-    /* border: 1px solid greenyellow; */
+    
     height: 50px;
     font-size: 18px;
 }
@@ -216,8 +216,8 @@ button {
     border-radius: 10px;
     margin-top: 100%;
     
-}
-button:hover {
+} */
+/* button:hover {
     border: 1.5px solid greenyellow;
     cursor: pointer;
 }
@@ -226,14 +226,80 @@ body > a {
 }
 body {
     color: greenyellow;
+} */
+body {
+    background-color: black;
+    color: greenyellow;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+fieldset {
+    background-color: gray;
+    font-size: 18px;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 3px solid greenyellow;
+    border-radius: 10px;
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    font-weight: bold;
 }
 
 section {
     display: inline flex;
     flex-direction: column;
+    text-align: center;
+    
 }
 .section-two {
-    display: inline flex;
-    align-content: center;
+    display: inline-flex;
+    flex-direction: column;
+    /* align-content: center; */
     justify-content: start;
+    align-items: baseline;
+    text-align: center;
+}
+.task-type-drop {
+    display: inline-flex;
+    flex-direction: column;
+    align-content: center;
+    width: 150px;
+    text-align: center;
+    height: 30px;
+    border-radius: 10px;
+       
+}
+.task-type {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+select {
+    display: flex;
+    border-radius: 10px;
+}
+
+input {
+    background-color: rgb(43, 42, 42);
+    color: greenyellow;
+    width: 150px;
+    border-radius: 10px;
+    font-size: 15px;
+}
+input[type=text]{
+    width: 200px;
+}
+input[type=date]{
+    text-align: center;
+}
+textarea {
+    
+    
+    background-color: rgb(43, 42, 42);
+    color: greenyellow;
+    width: 250px;
+    height: 100px;
 }
