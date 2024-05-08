@@ -280,6 +280,9 @@ fieldset {
         a{
             color: greenyellow;
         }
+        a:visited {
+            color: inherit;
+        }
 }
 
 section {

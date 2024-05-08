@@ -19,10 +19,11 @@ app.use(express.urlencoded({ extended: false }))
 app.use(methodOverride('_method'))
 app.use(express.static('public')) 
 
+
 app.get('/', (req, res) => {
     res.render('index.ejs')
 })
-//presents the user with a form to create a new task
+
 app.get('/tasks/new', (req, res) => {
     res.render('tasks/new.ejs')
    
@@ -40,8 +41,6 @@ app.get('/tasks', async (req, res) => {
          allTasks = await Task.find()
     }
     
-    
-
     res.render('tasks/index.ejs', {
         tasks: allTasks
     })
@@ -101,6 +100,7 @@ app.post('/tasks', async (req, res) => {
 //     }
 //     res.redirect('/tasks')
 // })
+// 
 
 app.delete('/tasks/:id', async (req, res) => {
     await Task.findByIdAndDelete(req.params.id)
@@ -116,6 +116,6 @@ app.get('/tasks/type/:taskType', async (req, res) => {
     } )
 })
 
-app.listen(3001, () => {
-    console.log('Listening on port 3000')
+app.listen(3002, () => {
+    console.log('Listening on port 3001')
 })
