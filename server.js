@@ -77,7 +77,8 @@ app.get('/tasks/:id/edit', async (req, res) => {
 })
 
 app.put('/tasks/:id', async (req, res) => {
-    const updatedTask = (req.body)
+    let updatedTask = (req.body)
+    
     await Task.findByIdAndUpdate(req.params.id, updatedTask)
     res.redirect('/tasks')
 })
@@ -88,6 +89,18 @@ app.post('/tasks', async (req, res) => {
     await Task.create(req.body)
     res.redirect('/tasks')
 })
+
+// app.put('/tasks/:id', async (req, res) => {
+//     console.log(req.body)
+//     try {
+//         console.log(req.body)
+//         await Task.findByIdAndUpdate(req.body)
+//     } catch(e) {
+//         console.log(e)
+    
+//     }
+//     res.redirect('/tasks')
+// })
 
 app.delete('/tasks/:id', async (req, res) => {
     await Task.findByIdAndDelete(req.params.id)
@@ -104,5 +117,5 @@ app.get('/tasks/type/:taskType', async (req, res) => {
 })
 
 app.listen(3000, () => {
-    console.log('Listening on port 3012')
+    console.log('Listening on port 3000')
 })

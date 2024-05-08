@@ -4,11 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/style.css">
-    <title><%= tasks.taskType %></title>
+    <title><%= tasks.task %></title>
 </head>
 <body>
     <%- include('../partials/nav.ejs') %>
-    <main class="category">
+
+    <main>
+        <div class="home">
+        
+        <h1>
+            <select id="filter-priority" name="priority">
+            <option value="default">Filter by priority level</option>
+            <option value="asc">Priority: Ascending</option>
+            <option value="desc">Priority: Descending</option>
+            
+         </select></h1>
+        <% tasks.forEach(task => { %>
+        <fieldset>
+         
+         <section class="col1">
+            <h1><a href="/tasks/<%= task._id %>"><%= task.taskName %></a></h1>
+            <h4>Date due: <%= task.dueDate %></h4>
+            
+            <h4>Time Due: <%= task.dueTime %></h4>
+            
+         </section>
+        <div class="col2"> Notes:
+        <%= task.description %>
+        </div>
+         <div class="col3">
+            <p>Priority level: <%= task.priority %></p>
+            <p>Task Type: <%= task.taskType %></p>
+         </div>
+         </fieldset>
+         
+        <% }) %>
+        </div>
+        </main>
+        <script>let filter = document.querySelector('#filter-priority')
+        console.log(filter)
+        filter.addEventListener('change', (e) => {
+            console.log(e.target.value)
+            if(e.target.value != 'default'){
+            window.location.href = "http://localhost:3000/tasks?filter=" + e.target.value;
+            }
+        })</script>
+    <!-- <main class="category">
         <div>
             <% tasks.forEach(task => { %>
                 <fieldset>
@@ -17,7 +58,7 @@
                 </fieldset>
                 <% }) %>
         </div>
-    </main>
+    </main> -->
         
 </body>
 </html>

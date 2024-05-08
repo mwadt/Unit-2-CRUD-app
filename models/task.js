@@ -7,7 +7,7 @@ const taskSchema = new mongoose.Schema({
     dueTime: String,
     taskType: {
         type: String,
-        default: 'none'
+        // default: 'none'
     },
     description: String,
     priority: Number,

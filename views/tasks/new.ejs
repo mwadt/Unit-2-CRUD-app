@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../../css/style.css">
-    <title>Document</title>
+    <title>New Task</title>
 </head>
 <body>
     <%- include('../partials/nav.ejs') %>
@@ -27,8 +27,18 @@
                             <option value="Appointments">Appointment</option>
                             <option value="Errand">Errand</option>
                             <option value="Hobbies">Hobby</option>
-                            <option value="Other"></option>
+                            <option value="Other">Other</option>
                         </select>
+                        <div class="priority-level">
+                        <label for="priority">Priority Level</label>
+                        <select name="priority">
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        </div>
                     </div>
                     </section>
                     <section class="section-two">
@@ -49,16 +59,7 @@
                     <div class="additional-notes">
                         <label for="description">Additional Notes</label>
                         <textarea name="description"></textarea>
-                        <div class="priority-level">
-                        <label for="priority">Priority Level</label>
-                        <select name="priority">
-                            <option value="1">1</option>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
-                            <option value="5">5</option>
-                        </select>
-                        </div>
+                        
                         <div class="right">
                         <button class="submit" type="submit">Create Task</button>
                         </div>

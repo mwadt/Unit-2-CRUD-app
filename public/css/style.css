@@ -246,15 +246,16 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 10px;
-    padding: 20px;
+    padding: 10px;
     background-color: rgb(43, 42, 42);
     a{
         color: greenyellow;
         display: inline-block;
-        background-color: gray;
+        
         padding: 5px;
     }
 }
+
 
 main {
     display: flex;
@@ -276,6 +277,9 @@ fieldset {
     display: flex;
     flex-direction: row;
     font-weight: bold;
+        a{
+            color: greenyellow;
+        }
 }
 
 section {

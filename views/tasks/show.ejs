@@ -3,18 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/show.css">
     <title><%= tasks.taskName %></title>
 </head>
 <body>
-    <%- include('../partials/nav.ejs') %>
-    <h1><%= tasks.taskName %></h1>
-    <h3>Due: <%= tasks.dueDate %></h3>
-    <h3>Time Due: <%= tasks.dueTime %></h3>
-    <h3>Task Type: <%= tasks.taskType %></h3>
-    <h4>Description: <%= tasks.description %></h4>
-    <h3>Priority Level: <%= tasks.priority %></h3>
-    <div class="options" method=post>
+<!--     
+        <%- include('../partials/nav.ejs') %>
+       
+    <div class="show">
+   
+    <main class="show">
+    <fieldset>
+        <section class="col1">
+            <div class="task-name">
+                <h1><%= tasks.taskName %></h1>
+            </div>
+            <div>
+                <h3>Due: <%= tasks.dueDate %></h3>
+            </div>
+            <div>
+            <h3>Time Due: <%= tasks.dueTime %></h3>
+            </div>
+        </section>
+        
+        <section class="col2"></section>
+            <div>
+                <h4>Description: <%= tasks.description %></h4>
+            </div>
+        </section>
+        <div>
+            <h3>Priority Level: <%= tasks.priority %></h3>
+        </div>
+        <div>
+            <h3>Task Type: <%= tasks.taskType %></h3>
+        </div>
+        <div class="options" method=post>
         <form action="/tasks/<%= tasks._id %>/edit">
         <button type="submit">Edit Task</button>
     </form>
@@ -22,6 +45,38 @@
         <button type="submit">Delete Task</button>
     </form>
     </div>
-    
+    </fieldset>
+    </div>
+    </main> -->
+    <%- include('../partials/nav.ejs') %>
+    <main>
+        <div class="show">
+          <fieldset>
+            <section class="col1">
+                <h1><%= tasks.taskName %></h1>
+                <h4>Date due: <%= tasks.dueDate %></h4>
+                <h4>Time due: <%= tasks.dueTime %></h4>
+            </section>
+            <div class="col2"> Notes:
+                <%= tasks.description %>
+            </div>
+                 <section class="col3">
+                    <p>Priority level: <%= tasks.priority %></p>
+                    <p>Task Type: <%= tasks.taskType %></p>
+                    <div class="options" method="post">
+                        <form action="/tasks/<%= tasks._id %>/edit">
+                            <button type="submit">Edit Task</button>
+                        </form>
+                        <form action="/tasks/<%= tasks._id %>?_method=delete" method="post">
+                            <button type="submit">Delete Task</button>
+                        </form>
+                    </div>
+            </section>
+           
+          </fieldset>  
+
+
+        </div>
+    </main>
 </body>
 </html>
